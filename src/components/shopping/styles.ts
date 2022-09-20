@@ -38,6 +38,6 @@ export const CoffeeBuyContainer = styled.div`
   }
   @media (max-width: 805px) {
     grid-template-columns: 100%;
-    padding: 0 4rem;
+    padding: 0 7.25%;
   }
 `;

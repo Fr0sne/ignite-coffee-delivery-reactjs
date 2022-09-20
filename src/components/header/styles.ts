@@ -65,6 +65,7 @@ export const ButtonContainer = styled.div`
 export const ImageContainer = styled.div`
   display: flex;
   margin-left: 10rem;
+  cursor: pointer;
   img {
     height: 2.5rem;
   }

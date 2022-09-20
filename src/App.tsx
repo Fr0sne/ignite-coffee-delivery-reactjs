@@ -3,12 +3,16 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import { Home } from './pages/Home/Home'
 import { Header } from './components/header/Header'
+import React from 'react';
 import { DefaultTheme } from './themes/default'
 import { ThemeContext, ThemeProvider } from 'styled-components'
 import { cartReducer } from './cart/CartReducer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Checkout } from './pages/Checkout/Checkout'
 import { Confirmed } from './pages/Confirmed/Confirmed'
+import { FacebookLogo } from 'phosphor-react'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 interface CoffeeCart {
   id?: string,
   quantity?: number
@@ -45,12 +49,13 @@ export const OrderInfo = createContext<{
   setOrderInfo: () => null
 } as any)
 function App() {
-  const [state, dispatch] = useReducer(cartReducer, []);
-  const [orderInfo, setOrderInfo] = useState({})
+  const [state, dispatch] = useReducer(cartReducer as any, []);
+  const [orderInfo, setOrderInfo] = useState({} as any)
   return (
     <>
       <OrderInfo.Provider value={{ orderInfo, setOrderInfo }}>
-        <CartContext.Provider value={{ state, dispatch }} >
+        <ToastContainer />
+        <CartContext.Provider value={{ state: state as any, dispatch }} >
           <Header />
           <Routes>
             <Route element={<Home />} path="/" />

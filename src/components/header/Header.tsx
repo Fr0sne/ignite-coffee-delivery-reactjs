@@ -16,7 +16,7 @@ export function Header() {
     }, [cartInfo])
     return (
         <HeaderContainer>
-            <ImageContainer>
+            <ImageContainer onClick={() => window.location.href = "/"}>
 
                 <img src={logo} />
             </ImageContainer>

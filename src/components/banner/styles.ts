@@ -35,12 +35,14 @@ export const BannerFirstContainer = styled.div`
   @media (max-width: 720px) {
     margin: 0;
     width: 90%;
+    margin: auto;
     img {
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       width: 85%;
+      margin: auto;
     }
   }
 `;
@@ -68,6 +70,8 @@ export const BannerTitleContainer = styled.div`
   color: var(--base-title);
   line-height: 130%;
   @media (max-width: 720px) {
+    text-align: center;
+    width: 100%;
     font-size: 2.25rem;
     line-height: 100%;
   }
@@ -78,6 +82,9 @@ export const BannerSubTitle = styled.div`
   line-height: 130%;
   font-family: "Roboto";
   color: var(--base-subtitle);
+  @media (max-width: 720px) {
+    text-align: center;
+  }
 `;
 
 export const BannerQualityContainer = styled.div`

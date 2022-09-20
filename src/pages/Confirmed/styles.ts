@@ -18,8 +18,11 @@ export const ConfirmedContainer = styled.div`
   }
   img {
     /* margin-top: auto; */
-    bottom: 0;
-    align-self: flex-end;
+  }
+  @media (max-width: 720px) {
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100% !important;
   }
 `;
 
@@ -30,6 +33,7 @@ export const ConfirmedOrderDetails = styled.div`
   border: solid 2px var(--purple);
   padding: 0 2rem;
   box-sizing: border-box;
+
   div {
     /* margin: 4rem 0; */
   }
@@ -37,10 +41,17 @@ export const ConfirmedOrderDetails = styled.div`
     display: block;
     color: var(--base-text);
   }
+  @media (max-width: 720px) {
+  }
 `;
 export const ConfirmedInfoContainer = styled.div`
   width: 50%;
   height: 50%;
+
+  @media (max-width: 720px) {
+    width: 90%;
+    margin: auto;
+  }
 `;
 
 export const ConfirmedIcons = styled.div`
